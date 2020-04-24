@@ -14,7 +14,7 @@ yarn
 
 ```javascript
 
-  yarn dev
+yarn dev
 
 ```
 
@@ -22,48 +22,52 @@ yarn
 
 ```javascript
 
-  yarn start
+yarn start
 
 ```
 
 ## run tests
 
 ```javascript
-  // with coverage
-  yarn test
+
+// with coverage
+yarn test
 
 ```
 
 ## run unit tests
 
 ```javascript
-  // with coverage
-  yarn test:unit
 
-  // without coverage
-  yarn test unit
+// with coverage
+yarn test:unit
+
+// without coverage
+yarn test unit
 
 ```
 
 ## run integration tests
 
 ```javascript
-  // with coverage
-  yarn test:integration
 
-  // without coverage
-  yarn test integration
+// with coverage
+yarn test:integration
+
+// without coverage
+yarn test integration
 
 ```
 
 ## run e2e tests
 
 ```javascript
-  // with coverage
-  yarn test:e2e
 
-  // without coverage
-  yarn test e2e
+// with coverage
+yarn test:e2e
+
+// without coverage
+yarn test e2e
 
 ```
 
