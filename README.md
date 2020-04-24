@@ -35,6 +35,7 @@ yarn;
 ```javascript
   // with coverage
   yarn test:unit
+  
   // without coverage
   yarn test unit
 
@@ -45,6 +46,7 @@ yarn;
 ```javascript
   // with coverage
   yarn test:integration
+  
   // without coverage
   yarn test integration
 
@@ -55,6 +57,7 @@ yarn;
 ```javascript
   // with coverage
   yarn test:e2e
+
   // without coverage
   yarn test e2e
 
