@@ -5,7 +5,9 @@ simple express api which converts words from a url serving a txt file into token
 ## Setup
 
 ```javascript
-yarn;
+
+yarn
+
 ```
 
 ## start the server with nodemon(dev)
