@@ -8,8 +8,6 @@ import request from 'supertest';
 
 jest.setTimeout(process.env.JEST_TIMEOUT || 40000);
 
-console.log(process.env.JEST_TIMEOUT);
-
 const createTestApp = () => {
     const app = express();
 

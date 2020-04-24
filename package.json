@@ -10,7 +10,10 @@
         "test:unit": "yarn test unit",
         "test:integration": "yarn test integration",
         "test:e2e": "yarn test e2e",
-        "lint": "eslint ./src"
+        "lint": "eslint ./src",
+        "docker:build": "docker build -t tokenizer .",
+        "docker:run": "docker run -d -p 3000:3000 tokenizer"
+        
     },
     "jest": {
         "testEnvironment": "node",

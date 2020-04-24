@@ -5,9 +5,7 @@ simple express api which converts words from a url serving a txt file into token
 ## Setup
 
 ```javascript
-
-yarn
-
+yarn;
 ```
 
 ## start the server with nodemon(dev)
@@ -71,17 +69,36 @@ yarn test e2e
 
 ```
 
+## build & run docker container
+
+```javascript
+
+// to build - be sure you dont have a .env file changing the defualt port (3000)
+yarn docker:build
+
+// to run
+yarn docker:run
+
+```
+
 ## Endpoints
 
 ? = optional
 
-| name                                 | body  | query | description                                  |
-| :----------------------------------- | :---- | :---- | :------------------------------------------- |
-| GET /                                |       |       | API end points                               |
-| GET /tokenizer/tokenize-bible        |       | obj?  | return King James’ Bible tokenized as array  |
-| GET /tokenizer/tokenize-bible/?obj=1 |       | obj?  | return King James’ Bible tokenized as object |
-| GET /tokenizer/tokenize-me           | url   | obj?  | return custom link tokenized as array        |
-| GET /tokenizer/tokenize-me/?obj=1    | url   | obj?  | return custom link tokenized as object       |
+| name                                 | body | query | description                                  |
+| :----------------------------------- | :--- | :---- | :------------------------------------------- |
+| GET /                                |      |       | API end points                               |
+| GET /tokenizer/tokenize-bible        |      | obj?  | return King James’ Bible tokenized as array  |
+| GET /tokenizer/tokenize-bible/?obj=1 |      | obj?  | return King James’ Bible tokenized as object |
+| GET /tokenizer/tokenize-me           | url  | obj?  | return custom link tokenized as array        |
+| GET /tokenizer/tokenize-me/?obj=1    | url  | obj?  | return custom link tokenized as object       |
+
+## Note
+
+the app has dotenv configured:
+
+-   you can change the port by adding a .env in local dev environment with PORT (default is 3000)
+-   same for tests, if tests fail for the long load time, set JEST_TIMEOUT (default is 40000 milliseconds)
 
 ## License
 
