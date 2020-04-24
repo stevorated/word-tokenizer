@@ -1,9 +1,13 @@
 # Word Repetitions Tokenizer
 
+simple express api which converts words from a url serving a txt file into tokens.
+
 ## Setup
 
 ```javascript
+
 yarn;
+
 ```
 
 ## start the server with nodemon(dev)
@@ -35,7 +39,7 @@ yarn;
 ```javascript
   // with coverage
   yarn test:unit
-  
+
   // without coverage
   yarn test unit
 
@@ -46,7 +50,7 @@ yarn;
 ```javascript
   // with coverage
   yarn test:integration
-  
+
   // without coverage
   yarn test integration
 
