@@ -26,6 +26,7 @@ describe('E2E tokenizer routes', () => {
     let app;
     let server;
     let port;
+
     beforeEach(() => {
         port = Math.round(Math.random() * 400) + 4000;
         app = createTestApp();
@@ -36,8 +37,7 @@ describe('E2E tokenizer routes', () => {
     });
 
     afterEach(async () => {
-        // console.log(server);
-        server && server.close();
+        server.close();
     });
 
     describe('GET /tokenize-my-bible', () => {
