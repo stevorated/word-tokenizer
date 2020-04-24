@@ -10,7 +10,7 @@ yarn
 
 ```
 
-## start the server with nodemon(dev)
+## Start the server with nodemon(dev)
 
 ```javascript
 
@@ -18,7 +18,7 @@ yarn dev
 
 ```
 
-## start the server
+## Start the server
 
 ```javascript
 
@@ -26,7 +26,7 @@ yarn start
 
 ```
 
-## run tests
+## Run tests
 
 ```javascript
 
@@ -35,7 +35,7 @@ yarn test
 
 ```
 
-## run unit tests
+## Run unit tests
 
 ```javascript
 
@@ -47,7 +47,7 @@ yarn test unit
 
 ```
 
-## run integration tests
+## Run integration tests
 
 ```javascript
 
@@ -59,7 +59,7 @@ yarn test integration
 
 ```
 
-## run e2e tests
+## Run e2e tests
 
 ```javascript
 
@@ -71,7 +71,7 @@ yarn test e2e
 
 ```
 
-## build & run docker container
+## Build & Run docker container
 
 ```javascript
 
