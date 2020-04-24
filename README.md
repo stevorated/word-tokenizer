@@ -6,7 +6,7 @@ simple express api which converts words from a url serving a txt file into token
 
 ```javascript
 
-yarn;
+yarn
 
 ```
 
