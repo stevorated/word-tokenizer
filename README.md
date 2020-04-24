@@ -71,13 +71,13 @@ yarn
 
 ? = optional
 
-| name                                 | params        | query | Desc                                         |
+| name                                 | params        | query | description                                  |
 | :----------------------------------- | :------------ | :---- | :------------------------------------------- |
 | GET /                                |               |       | API end points                               |
 | GET /tokenizer/tokenize-bible        |               | obj?  | return King James’ Bible tokenized as array  |
 | GET /tokenizer/tokenize-bible/?obj=1 |               | obj?  | return King James’ Bible tokenized as object |
-| GET /tokenizer/tokenize-me           | tokenizerType | obj?  | return King James’ Bible tokenized as array  |
-| GET /tokenizer/tokenize-me/?obj=1    | tokenizerType | obj?  | return King James’ Bible tokenized as object |
+| GET /tokenizer/tokenize-me           | tokenizerType | obj?  | return custom link tokenized as array        |
+| GET /tokenizer/tokenize-me/?obj=1    | tokenizerType | obj?  | return custom link tokenized as object       |
 
 ## License
 
