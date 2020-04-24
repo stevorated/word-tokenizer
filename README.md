@@ -10,7 +10,7 @@ yarn;
 
 ```javascript
 
-  yarn start
+  yarn dev
 
 ```
 
@@ -62,12 +62,15 @@ yarn;
 
 ## Endpoints
 
-| name                                 | params        | query | Desc                                        |
-| :------------------------------------|:--------------|:------|:--------------------------------------------| 
-| GET /tokenizer/tokenize-bible        |               | obj   | return King James’ Bible tokenized as array |
-| GET /tokenizer/tokenize-bible/?obj=1 |               | obj   | return King James’ Bible tokenized as array |
-| GET /tokenizer/tokenize-me           | tokenizerType | obj   | return King James’ Bible tokenized as array |
-| GET /tokenizer/tokenize-me/?obj=1    | tokenizerType | obj   | return King James’ Bible tokenized as array |
+? = optional
+
+| name                                 | params        | query | Desc                                         |
+| :----------------------------------- | :------------ | :---- | :------------------------------------------- |
+| GET /                                |               |       | API end points                               |
+| GET /tokenizer/tokenize-bible        |               | obj?  | return King James’ Bible tokenized as array  |
+| GET /tokenizer/tokenize-bible/?obj=1 |               | obj?  | return King James’ Bible tokenized as object |
+| GET /tokenizer/tokenize-me           | tokenizerType | obj?  | return King James’ Bible tokenized as array  |
+| GET /tokenizer/tokenize-me/?obj=1    | tokenizerType | obj?  | return King James’ Bible tokenized as object |
 
 ## License
 
