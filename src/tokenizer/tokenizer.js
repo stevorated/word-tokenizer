@@ -13,19 +13,21 @@ export const tokenizer = (text, options) => {
         );
     }
     const { tokenizerType } = options;
-    const cleanText = cleaner(text).split(' ');
-    const asObject = cleanText.reduce((acc, current) => ((acc[current] = acc[current] || 0), acc[current]++, acc), {});
+    const cleanTextArray = cleaner(text).split(' ');
+    const asObject = cleanTextArray.reduce(
+        (acc, current) => ((acc[current] = acc[current] || 0), acc[current]++, acc),
+        {}
+    );
 
-    // TODO: get rid of this!
     delete asObject[''];
 
     if (tokenizerType === 'object') {
         return asObject;
     }
 
-    const asArray = Object.keys(asObject).map((word) => ({
-        name: word,
-        repetitions: asObject[word],
+    const asArray = Object.entries(asObject).map(([word, repetitions]) => ({
+        word,
+        repetitions,
     }));
 
     return asArray;

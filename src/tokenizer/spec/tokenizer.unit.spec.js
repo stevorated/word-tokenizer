@@ -25,11 +25,11 @@ describe('Tokenizer Unit tests', () => {
         spy.mockImplementation(() => 'elephants are dirty great bastards elephants');
 
         const expectedReturn = [
-            { name: 'elephants', repetitions: 2 },
-            { name: 'are', repetitions: 1 },
-            { name: 'dirty', repetitions: 1 },
-            { name: 'great', repetitions: 1 },
-            { name: 'bastards', repetitions: 1 },
+            { word: 'elephants', repetitions: 2 },
+            { word: 'are', repetitions: 1 },
+            { word: 'dirty', repetitions: 1 },
+            { word: 'great', repetitions: 1 },
+            { word: 'bastards', repetitions: 1 },
         ];
 
         const textMock = 'elephants are dirty great bastards elephants';

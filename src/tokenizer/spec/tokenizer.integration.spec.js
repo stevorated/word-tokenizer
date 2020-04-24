@@ -7,11 +7,11 @@ describe('Tokenizer Integration tests', () => {
     describe('when tokenizerType', () => {
         test('is "default" should object type return - #1', () => {
             const expectedReturn = [
-                { name: 'elephants', repetitions: 2 },
-                { name: 'are', repetitions: 1 },
-                { name: 'dirty', repetitions: 1 },
-                { name: 'great', repetitions: 1 },
-                { name: 'bastards', repetitions: 1 },
+                { word: 'elephants', repetitions: 2 },
+                { word: 'are', repetitions: 1 },
+                { word: 'dirty', repetitions: 1 },
+                { word: 'great', repetitions: 1 },
+                { word: 'bastards', repetitions: 1 },
             ];
 
             const textMock = 'elephants are dirty great bastards elephants';
