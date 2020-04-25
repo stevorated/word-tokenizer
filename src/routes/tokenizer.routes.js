@@ -15,7 +15,7 @@ tokenizerRouter.get('/tokenize-bible', async (req, res) => {
     res.send(tokenized);
 });
 
-tokenizerRouter.get('/tokenize-me/', async (req, res) => {
+tokenizerRouter.post('/tokenize-me/', async (req, res) => {
     const { url } = req.body;
 
     if (!url) {

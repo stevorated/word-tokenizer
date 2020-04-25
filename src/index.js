@@ -28,15 +28,14 @@ app.get('/', async (_, res) => {
             queryString: [{ obj: '1' }],
         },
         {
-            route: `GET http://localhost:${PORT}/tokenizer/tokenize-me/`,
+            route: `POST http://localhost:${PORT}/tokenizer/tokenize-me/`,
             description:
                 'return text retrieved off the url target provided in the request body tokenized as array',
             queryString: [{ obj: '1', require: false }],
             body: [{ url: 'some url', require: true }],
         },
         {
-            route: 'GET /tokenizer/tokenize-me/?obj=1',
-            route: `GET http://localhost:${PORT}/tokenizer/tokenize-me/?obj=1`,
+            route: `POST http://localhost:${PORT}/tokenizer/tokenize-me/?obj=1`,
             description:
                 'return text retrieved off the url target provided in the request body tokenized as object',
             queryString: [{ obj: '1', require: false }],

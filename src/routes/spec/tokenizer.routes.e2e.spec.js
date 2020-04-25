@@ -62,40 +62,39 @@ describe('E2E tokenizer routes', () => {
         });
     });
 
-    describe('GET /tokenize-me', () => {
+    describe('POST /tokenize-me', () => {
         test('should return as expected when all good', async () => {
             await request(app)
-                .get('/tokenize-me')
+                .post('/tokenize-me')
                 .send({ url: 'http://www.gutenberg.org/cache/epub/10/pg10.txt' })
                 .expect((response) => {
                     expect(response.body.length).toBe(12899);
                     expect(response.body).toMatchSnapshot();
                 });
         });
-    });
-
-    test('should return proper message when link is bad', async () => {
-        await request(app)
-            .get('/tokenize-me')
-            .send({ url: 'http://thebaddestlink.com/sheker.txt' })
-            .expect((response) => {
-                expect(response.body).toStrictEqual({
-                    error:
-                        '[ERROR]: The url you gave has no text in it, please check it returns a txt file',
+        test('should return proper message when link is bad', async () => {
+            await request(app)
+                .post('/tokenize-me')
+                .send({ url: 'http://thebaddestlink.com/sheker.txt' })
+                .expect((response) => {
+                    expect(response.body).toStrictEqual({
+                        error:
+                            '[ERROR]: The url you gave has no text in it, please check it returns a txt file',
+                    });
+                    expect(response.body).toMatchSnapshot();
                 });
-                expect(response.body).toMatchSnapshot();
-            });
-    });
+        });
 
-    test('should return proper message when no body', async () => {
-        await request(app)
-            .get('/tokenize-me')
-            .expect((response) => {
-                expect(response.body).toStrictEqual({
-                    error: '[ERROR]: The url must be provided in the body of the request',
+        test('should return proper message when no body', async () => {
+            await request(app)
+                .post('/tokenize-me')
+                .expect((response) => {
+                    expect(response.body).toStrictEqual({
+                        error: '[ERROR]: The url must be provided in the body of the request',
+                    });
+
+                    expect(response.body).toMatchSnapshot();
                 });
-
-                expect(response.body).toMatchSnapshot();
-            });
+        });
     });
 });

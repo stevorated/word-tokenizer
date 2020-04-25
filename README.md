@@ -92,8 +92,8 @@ yarn docker:run
 | GET /                                |      |       | API end points                               |
 | GET /tokenizer/tokenize-bible        |      | obj?  | return King James’ Bible tokenized as array  |
 | GET /tokenizer/tokenize-bible/?obj=1 |      | obj?  | return King James’ Bible tokenized as object |
-| GET /tokenizer/tokenize-me           | url  | obj?  | return custom link tokenized as array        |
-| GET /tokenizer/tokenize-me/?obj=1    | url  | obj?  | return custom link tokenized as object       |
+| POST /tokenizer/tokenize-me          | url  | obj?  | return custom link tokenized as array        |
+| POST /tokenizer/tokenize-me/?obj=1   | url  | obj?  | return custom link tokenized as object       |
 
 ## Note
 
